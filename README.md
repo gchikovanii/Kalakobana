@@ -1,5 +1,4 @@
 # Kalakobana
-# Description
 This project is a web-based game where many players compete to enter words related to names, animals, cities, countries, and surnames based on a randomly generated alphabet letter. 
 The player who accurately enters the most relevant words in the shortest time wins the round.
 
