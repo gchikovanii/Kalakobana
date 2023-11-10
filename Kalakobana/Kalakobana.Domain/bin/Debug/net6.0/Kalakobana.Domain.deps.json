@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Kalakobana.Domain/1.0.0": {
+        "runtime": {
+          "Kalakobana.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kalakobana.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

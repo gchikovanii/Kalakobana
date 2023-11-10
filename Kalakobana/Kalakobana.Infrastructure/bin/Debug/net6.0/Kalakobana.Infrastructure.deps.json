@@ -1,0 +1,36 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Kalakobana.Infrastructure/1.0.0": {
+        "dependencies": {
+          "Kalakobana.Domain": "1.0.0"
+        },
+        "runtime": {
+          "Kalakobana.Infrastructure.dll": {}
+        }
+      },
+      "Kalakobana.Domain/1.0.0": {
+        "runtime": {
+          "Kalakobana.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Kalakobana.Infrastructure/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Kalakobana.Domain/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

@@ -1,0 +1,15 @@
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net6.0\Kalakobana.Infrastructure.deps.json
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net6.0\Kalakobana.Infrastructure.dll
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net6.0\Kalakobana.Infrastructure.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net6.0\Kalakobana.Domain.dll
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net6.0\Kalakobana.Domain.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.csproj.AssemblyReference.cache
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.AssemblyInfoInputs.cache
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.AssemblyInfo.cs
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.csproj.CoreCompileInputs.cache
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.csproj.CopyComplete
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.dll
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\refint\Kalakobana.Infrastructure.dll
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\ref\Kalakobana.Infrastructure.dll

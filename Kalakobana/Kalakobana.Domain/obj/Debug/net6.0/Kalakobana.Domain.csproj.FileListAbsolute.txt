@@ -1,0 +1,11 @@
+D:\Mosquito\Kalakobana\Kalakobana.Domain\bin\Debug\net6.0\Kalakobana.Domain.deps.json
+D:\Mosquito\Kalakobana\Kalakobana.Domain\bin\Debug\net6.0\Kalakobana.Domain.dll
+D:\Mosquito\Kalakobana\Kalakobana.Domain\bin\Debug\net6.0\Kalakobana.Domain.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.AssemblyInfoInputs.cache
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.AssemblyInfo.cs
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.csproj.CoreCompileInputs.cache
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.dll
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\refint\Kalakobana.Domain.dll
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\ref\Kalakobana.Domain.dll
