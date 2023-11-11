@@ -28,6 +28,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj": {
+                "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj"
+              },
               "D:\\Mosquito\\Kalakobana\\Kalakobana.Persistence\\Kalakobana.Persistence.csproj": {
                 "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Persistence\\Kalakobana.Persistence.csproj"
               }
@@ -44,6 +47,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.24, )"
@@ -110,6 +121,68 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj",
+        "projectName": "Kalakobana.Infrastructure",
+        "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\gchik\\.nuget\\packages\\",
+        "outputPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Mosquito\\Kalakobana\\Kalakobana.Domain\\Kalakobana.Domain.csproj": {
+                "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Domain\\Kalakobana.Domain.csproj"
+              },
+              "D:\\Mosquito\\Kalakobana\\Kalakobana.Persistence\\Kalakobana.Persistence.csproj": {
+                "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Persistence\\Kalakobana.Persistence.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
