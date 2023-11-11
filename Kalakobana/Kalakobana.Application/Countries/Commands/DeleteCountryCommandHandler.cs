@@ -1,4 +1,7 @@
-﻿using Kalakobana.Infrastructure.Repositories.Countries;
+﻿using Kalakobana.Application.Errors.Custom;
+using Kalakobana.Domain.Countries;
+using Kalakobana.Infrastructure.Repositories.Countries;
+using Mapster;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -19,7 +22,18 @@ namespace Kalakobana.Application.Countries.Commands
 
         public async Task<bool> Handle(DeleteCommand request, CancellationToken cancellationToken)
         {
-            return await _countryRepository.DeleteAsync(cancellationToken,request.Name).ConfigureAwait(false);
+            try
+            {
+                var result = await _countryRepository.DeleteAsync(cancellationToken, request.Name);
+                if (result == false)
+                    throw new NotFoundException("Not Found");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+            
         }
     }
 }

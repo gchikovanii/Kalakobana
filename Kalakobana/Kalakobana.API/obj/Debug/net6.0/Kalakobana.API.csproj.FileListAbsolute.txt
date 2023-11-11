@@ -70,3 +70,17 @@ D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net6.0\refint\Kalakobana.API.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net6.0\Kalakobana.API.pdb
 D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net6.0\Kalakobana.API.genruntimeconfig.cache
 D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net6.0\ref\Kalakobana.API.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Mapster.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Mapster.Core.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\MediatR.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\MediatR.Contracts.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Newtonsoft.Json.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Serilog.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Serilog.Sinks.File.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Kalakobana.Application.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Kalakobana.Infrastructure.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Kalakobana.Application.pdb
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net6.0\Kalakobana.Infrastructure.pdb

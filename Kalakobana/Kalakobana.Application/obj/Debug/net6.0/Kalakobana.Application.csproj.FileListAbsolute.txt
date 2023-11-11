@@ -9,3 +9,11 @@ D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\Kalakobana.Applic
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\refint\Kalakobana.Application.dll
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\Kalakobana.Application.pdb
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\ref\Kalakobana.Application.dll
+D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Domain.dll
+D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Infrastructure.dll
+D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Persistence.dll
+D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Infrastructure.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Domain.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Persistence.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\Kalakobana.Application.csproj.AssemblyReference.cache
+D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\Kalakobana.Application.csproj.CopyComplete

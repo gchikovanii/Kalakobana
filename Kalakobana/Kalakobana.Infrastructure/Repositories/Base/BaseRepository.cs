@@ -32,7 +32,7 @@ namespace Kalakobana.Infrastructure.Repositories.Base
 
         public async Task RemoveAsync(CancellationToken token, params object[] key)
         {
-            var entity = await _dbSet.FindAsync(key,token);
+            var entity = await _dbSet.FindAsync(key, token);
             _dbSet.Remove(entity);
         }
         public void Update(T entity, CancellationToken token)

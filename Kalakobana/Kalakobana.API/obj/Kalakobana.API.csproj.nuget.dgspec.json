@@ -28,6 +28,9 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
+              "D:\\Mosquito\\Kalakobana\\Kalakobana.Application\\Kalakobana.Application.csproj": {
+                "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Application\\Kalakobana.Application.csproj"
+              },
               "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj": {
                 "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj"
               },
@@ -69,6 +72,14 @@
               "target": "Package",
               "version": "[6.0.24, )"
             },
+            "Serilog": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
             "Swashbuckle.AspNetCore": {
               "target": "Package",
               "version": "[6.5.0, )"
@@ -89,6 +100,83 @@
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
             },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.402\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "D:\\Mosquito\\Kalakobana\\Kalakobana.Application\\Kalakobana.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "D:\\Mosquito\\Kalakobana\\Kalakobana.Application\\Kalakobana.Application.csproj",
+        "projectName": "Kalakobana.Application",
+        "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Application\\Kalakobana.Application.csproj",
+        "packagesPath": "C:\\Users\\gchik\\.nuget\\packages\\",
+        "outputPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\gchik\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net6.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net6.0": {
+            "targetAlias": "net6.0",
+            "projectReferences": {
+              "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj": {
+                "projectPath": "D:\\Mosquito\\Kalakobana\\Kalakobana.Infrastructure\\Kalakobana.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net6.0": {
+          "targetAlias": "net6.0",
+          "dependencies": {
+            "Mapster": {
+              "target": "Package",
+              "version": "[7.4.0, )"
+            },
+            "MediatR": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[11.0.0, )"
+            },
+            "Microsoft.AspNetCore.Mvc.Core": {
+              "target": "Package",
+              "version": "[2.2.5, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }

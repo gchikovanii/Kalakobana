@@ -7,6 +7,7 @@ namespace Kalakobana.API.Infrastructure.Extensions
     {
         public static void AddServices(this IServiceCollection services)
         {
+            services.AddScoped<ICountryRepository, CountryRepository>();
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
         }
     }

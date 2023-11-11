@@ -1,4 +1,5 @@
-﻿using Kalakobana.Domain.Countries;
+﻿using Kalakobana.Application.Errors.Custom;
+using Kalakobana.Domain.Countries;
 using Kalakobana.Infrastructure.Repositories.Countries;
 using Mapster;
 using MediatR;
@@ -21,7 +22,20 @@ namespace Kalakobana.Application.Countries.Commands
 
         public async Task<bool> Handle(UpdateCountryCommand request, CancellationToken cancellationToken)
         {
-            return await _countryRepository.UpdateAsync(cancellationToken,request.Adapt<Country>()).ConfigureAwait(false);
+            try
+            {
+                var result =  await _countryRepository.UpdateAsync(cancellationToken, request.Name, request.NewName).ConfigureAwait(false);
+
+                if(result == false)
+                    throw new NotFoundException("Not Found");
+                return result;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception(ex.Message);
+            }
+
+            
         }
     }
 }
