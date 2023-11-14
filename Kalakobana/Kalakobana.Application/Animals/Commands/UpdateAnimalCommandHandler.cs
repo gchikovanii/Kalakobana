@@ -20,7 +20,7 @@ namespace Kalakobana.Application.Animals.Commands
         {
             try
             {
-                await _animalRepository.UpdateAsync(cancellationToken, request.Name, request.NewName).ConfigureAwait(false);
+                await _animalRepository.UpdateAsync(cancellationToken, request.Name, request.NewName,request.AnimalType).ConfigureAwait(false);
                 var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 if (result == false)
                     throw new NotFoundException("Not Found");

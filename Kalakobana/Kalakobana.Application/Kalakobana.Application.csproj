@@ -16,10 +16,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Animals\Queries\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\Kalakobana.Infrastructure\Kalakobana.Infrastructure.csproj" />
   </ItemGroup>
 

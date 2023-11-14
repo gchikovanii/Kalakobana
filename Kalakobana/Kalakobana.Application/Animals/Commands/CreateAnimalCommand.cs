@@ -1,14 +1,11 @@
-﻿using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Kalakobana.Domain.Animals;
+using MediatR;
 
 namespace Kalakobana.Application.Animals.Commands
 {
-    public class CreateAnimalCommand : IRequest<int>
+    public class CreateAnimalCommand : IRequest<bool>
     {
         public string Name { get; set; }
+        public AnimalType AnimalType { get; set; }
     }
 }

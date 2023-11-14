@@ -1,5 +1,7 @@
 ﻿using Kalakobana.Application.Cities.Commands;
+using Kalakobana.Application.Cities.Queries;
 using Kalakobana.Application.Countries.Commands;
+using Kalakobana.Application.Countries.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +14,16 @@ namespace Kalakobana.API.Controllers
         public CityController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+        [HttpGet("ByLetter")]
+        public async Task<IActionResult> GetFilteredCities([FromQuery] GetFilteredCitiesQuery query, CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(query, cancellationToken));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetCities(CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(new GetCitiesQuery(), cancellationToken));
         }
 
         [HttpPost]

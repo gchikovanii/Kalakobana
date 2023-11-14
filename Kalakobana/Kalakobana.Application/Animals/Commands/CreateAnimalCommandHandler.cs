@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Kalakobana.Application.Animals.Commands
 {
-    internal class CreateAnimalCommandHandler : IRequestHandler<CreateAnimalCommand, int>
+    internal class CreateAnimalCommandHandler : IRequestHandler<CreateAnimalCommand, bool>
     {
         private readonly IAnimalRepository _animalRepository;
         private readonly IUnitOfWork _unitOfWork;
@@ -16,12 +16,12 @@ namespace Kalakobana.Application.Animals.Commands
             _animalRepository = animalRepository;
             _unitOfWork = unitOfWork;
         }
-        public async Task<int> Handle(CreateAnimalCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(CreateAnimalCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _animalRepository.CreateAsync(cancellationToken, request.Adapt<Animal>()).ConfigureAwait(false);
-                await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+                await _animalRepository.CreateAsync(cancellationToken, request.Adapt<Animal>()).ConfigureAwait(false);
+                var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 return result;
             }
             catch (Exception ex)

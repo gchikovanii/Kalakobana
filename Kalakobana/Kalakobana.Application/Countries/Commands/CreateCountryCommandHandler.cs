@@ -7,7 +7,7 @@ using MediatR;
 
 namespace Kalakobana.Application.Countries.Commands
 {
-    public class CreateCountryCommandHandler : IRequestHandler<CreateCountryCommand, int>
+    public class CreateCountryCommandHandler : IRequestHandler<CreateCountryCommand, bool>
     {
         private readonly ICountryRepository _countryRepository;
         private readonly IUnitOfWork _unitOfWork;
@@ -16,12 +16,12 @@ namespace Kalakobana.Application.Countries.Commands
             _countryRepository = countryRepository;
             _unitOfWork = unitOfWork;
         }
-        public async Task<int> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(CreateCountryCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _countryRepository.CreateAsync(cancellationToken, request.Adapt<Country>()).ConfigureAwait(false);
-                await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+                await _countryRepository.CreateAsync(cancellationToken, request.Adapt<Country>()).ConfigureAwait(false);
+                var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 return result;
             }
             catch (Exception ex)

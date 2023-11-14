@@ -10,7 +10,7 @@ namespace Kalakobana.Infrastructure.Repositories.FirstNames
 {
     public interface IFirstNameRepository
     {
-        Task<int> CreateAsync(CancellationToken cancellationToken, FirstName country);
+        Task CreateAsync(CancellationToken cancellationToken, FirstName country);
         Task UpdateAsync(CancellationToken cancellationToken, string name, string newName);
         Task DeleteAsync(CancellationToken cancellationToken, string name);
         Task<bool> Exists(CancellationToken cancellationToken, string name);

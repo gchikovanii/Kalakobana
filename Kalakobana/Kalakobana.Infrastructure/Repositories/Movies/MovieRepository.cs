@@ -15,10 +15,9 @@ namespace Kalakobana.Infrastructure.Repositories.Movies
             _movieRepository = movieRepository;
         }
 
-        public async Task<int> CreateAsync(CancellationToken cancellationToken, Movie movie)
+        public async Task CreateAsync(CancellationToken cancellationToken, Movie movie)
         {
             await _movieRepository.AddAsync(movie, cancellationToken);
-            return movie.Id;
         }
         public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {

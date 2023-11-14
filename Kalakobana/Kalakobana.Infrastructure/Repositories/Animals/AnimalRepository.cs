@@ -19,17 +19,17 @@ namespace Kalakobana.Infrastructure.Repositories.Animals
             _animalRepository = animalRepository;
         }
 
-        public async Task<int> CreateAsync(CancellationToken cancellationToken, Animal animal)
+        public async Task CreateAsync(CancellationToken cancellationToken, Animal animal)
         {
             await _animalRepository.AddAsync(animal, cancellationToken);
-            return animal.Id;
         }
-        public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
+        public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName, AnimalType animalType)
         {
             var entity = await _animalRepository.Table.FirstOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             entity.Name = newName;
+            entity.AnimalType = animalType;
             _animalRepository.Update(entity, cancellationToken);
         }
         public async Task DeleteAsync(CancellationToken cancellationToken, string name)

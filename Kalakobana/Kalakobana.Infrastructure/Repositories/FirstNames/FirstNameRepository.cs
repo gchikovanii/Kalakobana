@@ -19,10 +19,9 @@ namespace Kalakobana.Infrastructure.Repositories.FirstNames
             _firstNameRepository = firstNameRepository;
         }
 
-        public async Task<int> CreateAsync(CancellationToken cancellationToken, FirstName firstName)
+        public async Task CreateAsync(CancellationToken cancellationToken, FirstName firstName)
         {
             await _firstNameRepository.AddAsync(firstName, cancellationToken);
-            return firstName.Id;
         }
         public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {

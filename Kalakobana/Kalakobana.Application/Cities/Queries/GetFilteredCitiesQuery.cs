@@ -1,0 +1,16 @@
+﻿using Kalakobana.Application.Cities.responses;
+using Kalakobana.Application.Countries.Responses;
+using MediatR;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Kalakobana.Application.Cities.Queries
+{
+    public class GetFilteredCitiesQuery : IRequest<List<CityReponseModel>>
+    {
+        public string Letter { get; set; }
+    }
+}

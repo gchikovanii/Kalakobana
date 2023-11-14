@@ -10,8 +10,8 @@ namespace Kalakobana.Infrastructure.Repositories.Animals
 {
     public interface IAnimalRepository
     {
-        Task<int> CreateAsync(CancellationToken cancellationToken, Animal animal);
-        Task UpdateAsync(CancellationToken cancellationToken, string name, string newName);
+        Task CreateAsync(CancellationToken cancellationToken, Animal animal);
+        Task UpdateAsync(CancellationToken cancellationToken, string name, string newName, AnimalType animalType);
         Task DeleteAsync(CancellationToken cancellationToken, string name);
         Task<bool> Exists(CancellationToken cancellationToken, string name);
     }

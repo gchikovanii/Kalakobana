@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kalakobana.Application.Movies.Commands
 {
-    public class CreateMovieCommand : IRequest<int>
+    public class CreateMovieCommand : IRequest<bool>
     {
         public string Name { get; set; }
     }

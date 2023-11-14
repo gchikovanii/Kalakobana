@@ -1,4 +1,5 @@
-﻿using MediatR;
+﻿using Kalakobana.Domain.Animals;
+using MediatR;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,5 +12,6 @@ namespace Kalakobana.Application.Animals.Commands
     {
         public string Name { get; set; }
         public string NewName { get; set; }
+        public AnimalType AnimalType { get; set; }
     }
 }

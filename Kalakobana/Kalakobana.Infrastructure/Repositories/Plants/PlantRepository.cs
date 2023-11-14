@@ -19,10 +19,9 @@ namespace Kalakobana.Infrastructure.Repositories.Plants
             _plantRepository = plantRepository;
         }
 
-        public async Task<int> CreateAsync(CancellationToken cancellationToken, Plant plant)
+        public async Task CreateAsync(CancellationToken cancellationToken, Plant plant)
         {
             await _plantRepository.AddAsync(plant, cancellationToken);
-            return plant.Id;
         }
         public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {

@@ -1,5 +1,7 @@
 ﻿using Kalakobana.Application.Countries.Commands;
+using Kalakobana.Application.Countries.Queries;
 using Kalakobana.Application.FirstNames.Commands;
+using Kalakobana.Application.FirstNames.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -13,7 +15,16 @@ namespace Kalakobana.API.Controllers
         {
             _mediator = mediator;
         }
-
+        [HttpGet("ByLetter")]
+        public async Task<IActionResult> GetFilteredNames([FromQuery] GetFilteredFirstNamesQuery query, CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(query, cancellationToken));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetNames(CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(new GetFirstNamesQuery(), cancellationToken));
+        }
         [HttpPost]
         public async Task<IActionResult> Add(CreateFirstNameCommand command, CancellationToken cancellationToken)
         {

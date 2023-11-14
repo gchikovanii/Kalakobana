@@ -1,5 +1,7 @@
 ﻿using Kalakobana.Application.Countries.Commands;
-using Kalakobana.Application.Plants;
+using Kalakobana.Application.Countries.Queries;
+using Kalakobana.Application.Plants.Commands;
+using Kalakobana.Application.Plants.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +14,16 @@ namespace Kalakobana.API.Controllers
         public PlantController(IMediator mediator)
         {
             _mediator = mediator;
+        }
+        [HttpGet("ByLetter")]
+        public async Task<IActionResult> GetFilteredPlants([FromQuery] GetFilteredPlantsQuery query, CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(query, cancellationToken));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetPlants(CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(new GetPlantsQuery(), cancellationToken));
         }
 
         [HttpPost]

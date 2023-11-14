@@ -14,10 +14,9 @@ namespace Kalakobana.Infrastructure.Repositories.Cities
             _cityRepository = cityRepository;
         }
 
-        public async Task<int> CreateAsync(CancellationToken cancellationToken, City city)
+        public async Task CreateAsync(CancellationToken cancellationToken, City city)
         {
             await _cityRepository.AddAsync(city, cancellationToken);
-            return city.Id;
         }
         public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {

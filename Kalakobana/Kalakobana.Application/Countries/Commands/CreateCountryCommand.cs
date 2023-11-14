@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Kalakobana.Application.Countries.Commands
 {
-    public class CreateCountryCommand : IRequest<int>
+    public class CreateCountryCommand : IRequest<bool>
     {
         public string Name { get; set; }
     }

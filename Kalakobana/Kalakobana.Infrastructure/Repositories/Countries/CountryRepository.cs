@@ -13,10 +13,9 @@ namespace Kalakobana.Infrastructure.Repositories.Countries
             _countryRepository = countryRepository;
         }
 
-        public async Task<int> CreateAsync(CancellationToken cancellationToken, Country country)
+        public async Task CreateAsync(CancellationToken cancellationToken, Country country)
         {
             await _countryRepository.AddAsync(country,cancellationToken);
-            return country.Id;
         }
         public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {

@@ -6,7 +6,7 @@ using MediatR;
 
 namespace Kalakobana.Application.FirstNames.Commands
 {
-    public class CreateFirstNameCommandHandler : IRequestHandler<CreateFirstNameCommand, int>
+    public class CreateFirstNameCommandHandler : IRequestHandler<CreateFirstNameCommand, bool>
     {
         private readonly IFirstNameRepository _firstNameRepository;
         private readonly IUnitOfWork _unitOfWork;
@@ -15,12 +15,12 @@ namespace Kalakobana.Application.FirstNames.Commands
             _firstNameRepository = firstNameRepository;
             _unitOfWork = unitOfWork;
         }
-        public async Task<int> Handle(CreateFirstNameCommand request, CancellationToken cancellationToken)
+        public async Task<bool> Handle(CreateFirstNameCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _firstNameRepository.CreateAsync(cancellationToken, request.Adapt<FirstName>()).ConfigureAwait(false);
-                await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+                await _firstNameRepository.CreateAsync(cancellationToken, request.Adapt<FirstName>()).ConfigureAwait(false);
+                var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 return result;
             }
             catch (Exception ex)
