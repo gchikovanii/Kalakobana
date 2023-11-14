@@ -1,4 +1,5 @@
 ﻿using Kalakobana.Application.Countries.Commands;
+using Kalakobana.Application.Countries.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -12,6 +13,17 @@ namespace Kalakobana.API.Controllers
         {
             _mediator = mediator;
         }
+        [HttpGet("ByName")]
+        public async Task<IActionResult> GetCountry([FromQuery] GetCountryQuery query, CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(query, cancellationToken));
+        }
+        [HttpGet]
+        public async Task<IActionResult> GetCountries(CancellationToken cancellationToken)
+        {
+            return Ok(await _mediator.Send(new GetCountriesQuery(),cancellationToken));
+        }
+        
 
         [HttpPost]
         public async Task<IActionResult> Add(CreateCountryCommand command, CancellationToken cancellationToken)

@@ -1,14 +1,8 @@
-﻿using Kalakobana.Application.Errors.Custom;
-using Kalakobana.Application.Movies.Commands;
-using Kalakobana.Infrastructure.Repositories.Movies;
+﻿using Kalakobana.Application.Infrastructure.Errors.Custom;
 using Kalakobana.Infrastructure.Repositories.Plants;
 using Kalakobana.Infrastructure.Units;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Kalakobana.Application.Plants
 {

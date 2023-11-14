@@ -1,4 +1,4 @@
-﻿using Kalakobana.Application.Errors.Custom;
+﻿using Kalakobana.Application.Infrastructure.Errors.Custom;
 using Kalakobana.Infrastructure.Repositories.Animals;
 using Kalakobana.Infrastructure.Units;
 using MediatR;

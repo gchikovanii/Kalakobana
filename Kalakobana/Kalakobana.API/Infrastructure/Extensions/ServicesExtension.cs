@@ -1,4 +1,5 @@
-﻿using Kalakobana.Infrastructure.Repositories.Animals;
+﻿using Kalakobana.Application.Infrastructure.Connections;
+using Kalakobana.Infrastructure.Repositories.Animals;
 using Kalakobana.Infrastructure.Repositories.Base;
 using Kalakobana.Infrastructure.Repositories.Cities;
 using Kalakobana.Infrastructure.Repositories.Countries;
@@ -23,6 +24,8 @@ namespace Kalakobana.API.Infrastructure.Extensions
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
             services.AddScoped<IUnitOfWork, UnitOfWork>();
+            services.AddScoped<ISqlConnectionFactory, SqlConnectionFactory>();
+
 
         }
     }

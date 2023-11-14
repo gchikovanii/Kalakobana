@@ -1,4 +1,4 @@
-﻿using Kalakobana.Application.Errors;
+﻿using Kalakobana.Application.Infrastructure.Errors;
 using Newtonsoft.Json;
 using System.Text.Json.Serialization;
 
