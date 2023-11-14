@@ -1,6 +1,7 @@
 ﻿using Kalakobana.Application.Errors.Custom;
 using Kalakobana.Domain.Countries;
 using Kalakobana.Infrastructure.Repositories.Countries;
+using Kalakobana.Infrastructure.Units;
 using Mapster;
 using MediatR;
 using System;
@@ -14,17 +15,19 @@ namespace Kalakobana.Application.Countries.Commands
     public class DeleteCountryCommandHandler : IRequestHandler<DeleteCommand, bool>
     {
         private readonly ICountryRepository _countryRepository;
-
-        public DeleteCountryCommandHandler(ICountryRepository countryRepository)
+        private readonly IUnitOfWork _unitOfWork;
+        public DeleteCountryCommandHandler(ICountryRepository countryRepository, IUnitOfWork unitOfWork)
         {
             _countryRepository = countryRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<bool> Handle(DeleteCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _countryRepository.DeleteAsync(cancellationToken, request.Name);
+                await _countryRepository.DeleteAsync(cancellationToken, request.Name);
+                var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 if (result == false)
                     throw new NotFoundException("Not Found");
                 return result;

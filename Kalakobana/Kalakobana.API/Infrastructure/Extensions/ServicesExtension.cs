@@ -6,6 +6,7 @@ using Kalakobana.Infrastructure.Repositories.FirstNames;
 using Kalakobana.Infrastructure.Repositories.LastNames;
 using Kalakobana.Infrastructure.Repositories.Movies;
 using Kalakobana.Infrastructure.Repositories.Plants;
+using Kalakobana.Infrastructure.Units;
 
 namespace Kalakobana.API.Infrastructure.Extensions
 {
@@ -21,6 +22,8 @@ namespace Kalakobana.API.Infrastructure.Extensions
             services.AddScoped<IPlantRepository, PlantRepository>();
             services.AddScoped<IMovieRepository, MovieRepository>();
             services.AddScoped(typeof(IBaseRepository<>), typeof(BaseRepository<>));
+            services.AddScoped<IUnitOfWork, UnitOfWork>();
+
         }
     }
 }

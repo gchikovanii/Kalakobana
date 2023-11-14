@@ -16,25 +16,22 @@ namespace Kalakobana.Infrastructure.Repositories.Countries
         public async Task<int> CreateAsync(CancellationToken cancellationToken, Country country)
         {
             await _countryRepository.AddAsync(country,cancellationToken);
-            await _countryRepository.SaveChangesAsync(cancellationToken);
             return country.Id;
         }
-        public async Task<bool> UpdateAsync(CancellationToken cancellationToken, string name, string newName)
+        public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {
             var entity = await _countryRepository.Table.FirstOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             entity.Name = newName;
             _countryRepository.Update(entity, cancellationToken);
-            return await _countryRepository.SaveChangesAsync(cancellationToken);
         }
-        public async Task<bool> DeleteAsync(CancellationToken cancellationToken, string name)
+        public async Task DeleteAsync(CancellationToken cancellationToken, string name)
         {
             var entity = await _countryRepository.Table.SingleOrDefaultAsync(i => i.Name == name);
             if(entity == null)
                 throw new Exception();
             await _countryRepository.RemoveAsync(cancellationToken,entity.Id);
-            return await _countryRepository.SaveChangesAsync(cancellationToken);
         }
         public async Task<bool> Exists(CancellationToken cancellationToken, string name)
         {

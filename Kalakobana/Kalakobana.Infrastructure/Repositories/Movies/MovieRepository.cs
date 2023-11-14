@@ -18,25 +18,22 @@ namespace Kalakobana.Infrastructure.Repositories.Movies
         public async Task<int> CreateAsync(CancellationToken cancellationToken, Movie movie)
         {
             await _movieRepository.AddAsync(movie, cancellationToken);
-            await _movieRepository.SaveChangesAsync(cancellationToken);
             return movie.Id;
         }
-        public async Task<bool> UpdateAsync(CancellationToken cancellationToken, string name, string newName)
+        public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {
             var entity = await _movieRepository.Table.FirstOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             entity.Name = newName;
             _movieRepository.Update(entity, cancellationToken);
-            return await _movieRepository.SaveChangesAsync(cancellationToken);
         }
-        public async Task<bool> DeleteAsync(CancellationToken cancellationToken, string name)
+        public async Task DeleteAsync(CancellationToken cancellationToken, string name)
         {
             var entity = await _movieRepository.Table.SingleOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             await _movieRepository.RemoveAsync(cancellationToken, entity.Id);
-            return await _movieRepository.SaveChangesAsync(cancellationToken);
         }
         public async Task<bool> Exists(CancellationToken cancellationToken, string name)
         {

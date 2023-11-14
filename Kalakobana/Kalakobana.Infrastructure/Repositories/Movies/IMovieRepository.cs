@@ -11,8 +11,8 @@ namespace Kalakobana.Infrastructure.Repositories.Movies
     public interface IMovieRepository
     {
         Task<int> CreateAsync(CancellationToken cancellationToken, Movie movie);
-        Task<bool> UpdateAsync(CancellationToken cancellationToken, string name, string newName);
-        Task<bool> DeleteAsync(CancellationToken cancellationToken, string name);
+        Task UpdateAsync(CancellationToken cancellationToken, string name, string newName);
+        Task DeleteAsync(CancellationToken cancellationToken, string name);
         Task<bool> Exists(CancellationToken cancellationToken, string name);
     }
 }

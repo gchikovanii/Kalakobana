@@ -1,4 +1,5 @@
 ﻿using Kalakobana.Application.Countries.Commands;
+using Kalakobana.Application.Plants;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -14,19 +15,19 @@ namespace Kalakobana.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Add(CreateCountryCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Add(CreatePlantCommand command, CancellationToken cancellationToken)
         {
             return Ok(await _mediator.Send(command, cancellationToken));
         }
 
         [HttpPut]
-        public async Task<IActionResult> Update(UpdateCountryCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Update(UpdatePlantCommand command, CancellationToken cancellationToken)
         {
             return Ok(await _mediator.Send(command, cancellationToken));
         }
 
         [HttpDelete]
-        public async Task<IActionResult> Delete([FromForm] DeleteCommand command, CancellationToken cancellationToken)
+        public async Task<IActionResult> Delete([FromForm] DeletePlantCommand command, CancellationToken cancellationToken)
         {
             return Ok(await _mediator.Send(command, cancellationToken));
         }

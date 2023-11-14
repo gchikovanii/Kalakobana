@@ -2,6 +2,7 @@
 using Kalakobana.Application.Movies.Commands;
 using Kalakobana.Infrastructure.Repositories.Movies;
 using Kalakobana.Infrastructure.Repositories.Plants;
+using Kalakobana.Infrastructure.Units;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -14,18 +15,19 @@ namespace Kalakobana.Application.Plants
     public class UpdatePlantCommandHandler : IRequestHandler<UpdatePlantCommand, bool>
     {
         private readonly IPlantRepository _plantRepository;
-
-        public UpdatePlantCommandHandler(IPlantRepository plantRepository)
+        private readonly IUnitOfWork _unitOfWork;
+        public UpdatePlantCommandHandler(IPlantRepository plantRepository, IUnitOfWork unitOfWork)
         {
             _plantRepository = plantRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<bool> Handle(UpdatePlantCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _plantRepository.UpdateAsync(cancellationToken, request.Name, request.NewName).ConfigureAwait(false);
-
+                await _plantRepository.UpdateAsync(cancellationToken, request.Name, request.NewName).ConfigureAwait(false);
+                var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 if (result == false)
                     throw new NotFoundException("Not Found");
                 return result;

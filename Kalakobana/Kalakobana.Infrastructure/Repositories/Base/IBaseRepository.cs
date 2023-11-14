@@ -9,7 +9,6 @@ namespace Kalakobana.Infrastructure.Repositories.Base
         void Update(T entity, CancellationToken token);  
         Task RemoveAsync(CancellationToken token,params object[] key);
         Task<bool> AnyAsync(Expression<Func<T,bool>> predicate, CancellationToken token);
-        Task<bool> SaveChangesAsync(CancellationToken token);
 
     }
 }

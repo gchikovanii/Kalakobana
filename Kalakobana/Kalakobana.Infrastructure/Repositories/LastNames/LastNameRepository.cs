@@ -22,25 +22,22 @@ namespace Kalakobana.Infrastructure.Repositories.LastNames
         public async Task<int> CreateAsync(CancellationToken cancellationToken, LastName lastName)
         {
             await _lastNameRepository.AddAsync(lastName, cancellationToken);
-            await _lastNameRepository.SaveChangesAsync(cancellationToken);
             return lastName.Id;
         }
-        public async Task<bool> UpdateAsync(CancellationToken cancellationToken, string name, string newName)
+        public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {
             var entity = await _lastNameRepository.Table.FirstOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             entity.Name = newName;
             _lastNameRepository.Update(entity, cancellationToken);
-            return await _lastNameRepository.SaveChangesAsync(cancellationToken);
         }
-        public async Task<bool> DeleteAsync(CancellationToken cancellationToken, string name)
+        public async Task DeleteAsync(CancellationToken cancellationToken, string name)
         {
             var entity = await _lastNameRepository.Table.SingleOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             await _lastNameRepository.RemoveAsync(cancellationToken, entity.Id);
-            return await _lastNameRepository.SaveChangesAsync(cancellationToken);
         }
         public async Task<bool> Exists(CancellationToken cancellationToken, string name)
         {

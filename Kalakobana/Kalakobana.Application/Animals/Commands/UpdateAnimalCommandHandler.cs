@@ -1,5 +1,6 @@
 ﻿using Kalakobana.Application.Errors.Custom;
 using Kalakobana.Infrastructure.Repositories.Animals;
+using Kalakobana.Infrastructure.Units;
 using MediatR;
 
 
@@ -8,18 +9,19 @@ namespace Kalakobana.Application.Animals.Commands
     public class UpdateAnimalCommandHandler : IRequestHandler<UpdateAnimalCommand, bool>
     {
         private readonly IAnimalRepository _animalRepository;
-
-        public UpdateAnimalCommandHandler(IAnimalRepository animalRepository)
+        private readonly IUnitOfWork _unitOfWork;
+        public UpdateAnimalCommandHandler(IAnimalRepository animalRepository, IUnitOfWork unitOfWork)
         {
             _animalRepository = animalRepository;
+            _unitOfWork = unitOfWork;
         }
 
         public async Task<bool> Handle(UpdateAnimalCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                var result = await _animalRepository.UpdateAsync(cancellationToken, request.Name, request.NewName).ConfigureAwait(false);
-
+                await _animalRepository.UpdateAsync(cancellationToken, request.Name, request.NewName).ConfigureAwait(false);
+                var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 if (result == false)
                     throw new NotFoundException("Not Found");
                 return result;

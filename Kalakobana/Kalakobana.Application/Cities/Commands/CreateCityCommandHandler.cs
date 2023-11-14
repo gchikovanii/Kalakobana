@@ -3,6 +3,7 @@ using Kalakobana.Domain.Animals;
 using Kalakobana.Domain.Cities;
 using Kalakobana.Infrastructure.Repositories.Animals;
 using Kalakobana.Infrastructure.Repositories.Cities;
+using Kalakobana.Infrastructure.Units;
 using Mapster;
 using MediatR;
 using System;
@@ -16,16 +17,19 @@ namespace Kalakobana.Application.Cities.Commands
     public class CreateCityCommandHandler : IRequestHandler<CreateCityCommand, int>
     {
         private readonly ICityRepository _cityRepository;
-
-        public CreateCityCommandHandler(ICityRepository cityRepository)
+        private readonly IUnitOfWork _unitOfWork;
+        public CreateCityCommandHandler(ICityRepository cityRepository, IUnitOfWork unitOfWork)
         {
             _cityRepository = cityRepository;
+            _unitOfWork = unitOfWork;
         }
         public async Task<int> Handle(CreateCityCommand request, CancellationToken cancellationToken)
         {
             try
             {
-                return await _cityRepository.CreateAsync(cancellationToken, request.Adapt<City>()).ConfigureAwait(false);
+                var result =  await _cityRepository.CreateAsync(cancellationToken, request.Adapt<City>()).ConfigureAwait(false);
+                await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
+                return result;
             }
             catch (Exception ex)
             {

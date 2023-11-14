@@ -17,25 +17,22 @@ namespace Kalakobana.Infrastructure.Repositories.Cities
         public async Task<int> CreateAsync(CancellationToken cancellationToken, City city)
         {
             await _cityRepository.AddAsync(city, cancellationToken);
-            await _cityRepository.SaveChangesAsync(cancellationToken);
             return city.Id;
         }
-        public async Task<bool> UpdateAsync(CancellationToken cancellationToken, string name, string newName)
+        public async Task UpdateAsync(CancellationToken cancellationToken, string name, string newName)
         {
             var entity = await _cityRepository.Table.FirstOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             entity.Name = newName;
             _cityRepository.Update(entity, cancellationToken);
-            return await _cityRepository.SaveChangesAsync(cancellationToken);
         }
-        public async Task<bool> DeleteAsync(CancellationToken cancellationToken, string name)
+        public async Task DeleteAsync(CancellationToken cancellationToken, string name)
         {
             var entity = await _cityRepository.Table.SingleOrDefaultAsync(i => i.Name == name);
             if (entity == null)
                 throw new Exception();
             await _cityRepository.RemoveAsync(cancellationToken, entity.Id);
-            return await _cityRepository.SaveChangesAsync(cancellationToken);
         }
         public async Task<bool> Exists(CancellationToken cancellationToken, string name)
         {

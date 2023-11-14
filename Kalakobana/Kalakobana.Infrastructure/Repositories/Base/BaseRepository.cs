@@ -1,11 +1,7 @@
 ﻿using Kalakobana.Persistence.DataContext;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Linq.Expressions;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace Kalakobana.Infrastructure.Repositories.Base
 {
@@ -40,10 +36,6 @@ namespace Kalakobana.Infrastructure.Repositories.Base
             if (entity == null)
                 return;
             _dbSet.Update(entity);
-        }
-        public async Task<bool> SaveChangesAsync(CancellationToken token)
-        {
-            return await _context.SaveChangesAsync(token).ConfigureAwait(false) > 0;
         }
     }
 }
