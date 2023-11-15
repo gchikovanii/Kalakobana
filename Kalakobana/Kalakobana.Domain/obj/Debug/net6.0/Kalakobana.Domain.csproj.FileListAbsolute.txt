@@ -9,3 +9,4 @@ D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.dll
 D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\refint\Kalakobana.Domain.dll
 D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.pdb
 D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\ref\Kalakobana.Domain.dll
+D:\Mosquito\Kalakobana\Kalakobana.Domain\obj\Debug\net6.0\Kalakobana.Domain.sourcelink.json

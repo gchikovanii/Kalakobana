@@ -17,3 +17,4 @@ D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Domain
 D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net6.0\Kalakobana.Persistence.pdb
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\Kalakobana.Application.csproj.AssemblyReference.cache
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\Kalakobana.Application.csproj.CopyComplete
+D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net6.0\Kalakobana.Application.sourcelink.json

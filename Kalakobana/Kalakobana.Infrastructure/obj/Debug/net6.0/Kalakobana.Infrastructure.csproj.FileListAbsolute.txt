@@ -15,3 +15,4 @@ D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Inf
 D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\ref\Kalakobana.Infrastructure.dll
 D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net6.0\Kalakobana.Persistence.dll
 D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net6.0\Kalakobana.Persistence.pdb
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net6.0\Kalakobana.Infrastructure.sourcelink.json
