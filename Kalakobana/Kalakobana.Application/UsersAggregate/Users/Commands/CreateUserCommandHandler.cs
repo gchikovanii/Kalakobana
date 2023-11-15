@@ -21,8 +21,15 @@ namespace Kalakobana.Application.Users.Commands
         public async Task<bool> Handle(CreateUserCommand request, CancellationToken cancellationToken)
         {
             var userExists = await _userManager.FindByEmailAsync(request.Email);
-            if (userExists != null)
+            var checkUserName = await _userManager.FindByNameAsync(request.UserName);
+            if (userExists == null)
             {
+               
+                if (checkUserName != null)
+                {
+                    return false;
+                    //Already Exists with this username
+                }
                 var currentUser = new IdentityUser()
                 {
                     UserName = request.UserName,
@@ -35,8 +42,8 @@ namespace Kalakobana.Application.Users.Commands
                     await _userManager.AddToRoleAsync(currentUser, Role.User.ToString()); 
                     return true;
                 }
-                return createdUser.Errors.Any();
             }
+            //already exists with this mail
             return false;
         }
     }

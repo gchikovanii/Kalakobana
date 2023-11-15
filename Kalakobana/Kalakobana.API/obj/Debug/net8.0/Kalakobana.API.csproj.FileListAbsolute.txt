@@ -13,7 +13,6 @@ D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Mapster.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Mapster.Core.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\MediatR.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\MediatR.Contracts.dll
-D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Microsoft.Bcl.AsyncInterfaces.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Microsoft.CodeAnalysis.dll
@@ -153,3 +152,5 @@ D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net8.0\refint\Kalakobana.API.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net8.0\Kalakobana.API.pdb
 D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net8.0\Kalakobana.API.genruntimeconfig.cache
 D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net8.0\ref\Kalakobana.API.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll

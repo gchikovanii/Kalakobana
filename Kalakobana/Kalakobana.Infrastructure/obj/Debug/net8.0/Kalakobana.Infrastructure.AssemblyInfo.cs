@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kalakobana.Infrastructure")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c754314275ac8fbf300a5504013eb7b499aff5b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d66468ddda6817abf46c693482c762737a442da9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kalakobana.Infrastructure")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kalakobana.Infrastructure")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
