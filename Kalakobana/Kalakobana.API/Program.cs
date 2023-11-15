@@ -3,8 +3,10 @@ using Kalakobana.API.Infrastructure.Extensions;
 using Kalakobana.Persistence.DataContext;
 using Kalakobana.Persistence.Store;
 using MediatR;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
+using System.Reflection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -22,11 +24,17 @@ builder.Services.Configure<ConnectionStrings>(builder.Configuration.GetSection(n
 builder.Services.AddDbContext<KalakobanaDbContext>(options => 
                                                   options.UseSqlServer(builder.Configuration.GetConnectionString(nameof(ConnectionStrings.DefaultConnectionString))), ServiceLifetime.Scoped);
 #endregion
+
 #region AddServices
 builder.Services.AddServices();
 #endregion
+#region Identity
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<KalakobanaDbContext>();
+#endregion
 #region MediatR
-builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+//builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+
 #endregion
 
 

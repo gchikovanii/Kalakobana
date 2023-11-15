@@ -5,11 +5,13 @@ using Kalakobana.Domain.LastNames;
 using Kalakobana.Domain.Movies;
 using Kalakobana.Domain.Names;
 using Kalakobana.Domain.Plants;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace Kalakobana.Persistence.DataContext
 {
-    public class KalakobanaDbContext : DbContext
+    public class KalakobanaDbContext : IdentityDbContext<IdentityUser>
     {
         public KalakobanaDbContext(DbContextOptions<KalakobanaDbContext> options) : base(options)
         {
