@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kalakobana.API")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+073c6995f34c62e9ccd01e23501af2c18bac1e91")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2e007a04404da28ba9b9a6a55ba25a1cd867bca6")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kalakobana.API")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kalakobana.API")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

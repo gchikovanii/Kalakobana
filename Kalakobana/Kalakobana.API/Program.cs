@@ -35,7 +35,6 @@ builder.Services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
 
 #endregion
 
-
 var app = builder.Build();
 
 if (app.Environment.IsDevelopment())
@@ -43,12 +42,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
-
-
 app.UseHttpsRedirection();
+app.UseCulture();
+app.UseGlobalExceptionHandler();
 app.UseAuthentication();
 app.UseAuthorization();
-app.UseGlobalExceptionHandler();
 app.MapControllers();
 
 
