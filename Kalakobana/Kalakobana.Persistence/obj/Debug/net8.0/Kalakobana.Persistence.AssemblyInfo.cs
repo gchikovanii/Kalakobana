@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Kalakobana.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d66468ddda6817abf46c693482c762737a442da9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+073c6995f34c62e9ccd01e23501af2c18bac1e91")]
 [assembly: System.Reflection.AssemblyProductAttribute("Kalakobana.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Kalakobana.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

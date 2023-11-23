@@ -1,4 +1,5 @@
-﻿using Kalakobana.Application.Infrastructure.Errors.Custom;
+﻿using Kalakobana.Infrastructure.Errors;
+using Kalakobana.Infrastructure.Localizations;
 using Kalakobana.Infrastructure.Repositories.Movies;
 using Kalakobana.Infrastructure.Units;
 using MediatR;
@@ -22,7 +23,7 @@ namespace Kalakobana.Application.Movies.Commands
                 await _movieRepository.UpdateAsync(cancellationToken, request.Name, request.NewName).ConfigureAwait(false);
                 var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 if (result == false)
-                    throw new NotFoundException("Not Found");
+                    throw new NotFoundException(ErrorMessages.NotFound);
                 return result;
             }
             catch (Exception ex)

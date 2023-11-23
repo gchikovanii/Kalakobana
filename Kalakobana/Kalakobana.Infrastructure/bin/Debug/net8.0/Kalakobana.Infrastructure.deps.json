@@ -13,6 +13,11 @@
         },
         "runtime": {
           "Kalakobana.Infrastructure.dll": {}
+        },
+        "resources": {
+          "ka-GE/Kalakobana.Infrastructure.resources.dll": {
+            "locale": "ka-GE"
+          }
         }
       },
       "Azure.Core/1.36.0": {

@@ -16,3 +16,8 @@ D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\Kalakobana.Inf
 D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\refint\Kalakobana.Infrastructure.dll
 D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\Kalakobana.Infrastructure.pdb
 D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\ref\Kalakobana.Infrastructure.dll
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\bin\Debug\net8.0\ka-GE\Kalakobana.Infrastructure.resources.dll
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\Kalakobana.Infrastructure.Localizations.ErrorMessages.resources
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\Kalakobana.Infrastructure.Localizations.ErrorMessages.ka-GE.resources
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\Kalakobana.Infrastructure.csproj.GenerateResource.cache
+D:\Mosquito\Kalakobana\Kalakobana.Infrastructure\obj\Debug\net8.0\ka-GE\Kalakobana.Infrastructure.resources.dll

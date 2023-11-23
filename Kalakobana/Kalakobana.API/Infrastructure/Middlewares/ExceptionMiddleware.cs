@@ -1,8 +1,7 @@
-﻿using Kalakobana.Application.Infrastructure.Errors;
+﻿using Kalakobana.API.Infrastructure.Errors;
 using Newtonsoft.Json;
-using System.Text.Json.Serialization;
 
-namespace Kalakobana.API.Infrastructure.Exceptions
+namespace Kalakobana.API.Infrastructure.Middlewares
 {
     public class ExceptionMiddleware
     {
@@ -27,7 +26,7 @@ namespace Kalakobana.API.Infrastructure.Exceptions
 
         private async Task HandleExceptionAsync(HttpContext context, Exception ex)
         {
-            var error = new Errors(context, ex);
+            var error = new ApiError(context, ex);
             var result = JsonConvert.SerializeObject(error);
 
             context.Response.Clear();

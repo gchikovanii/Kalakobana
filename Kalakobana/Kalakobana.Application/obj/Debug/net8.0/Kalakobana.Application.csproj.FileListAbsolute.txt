@@ -18,3 +18,4 @@ D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net8.0\Kalakobana.Applic
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net8.0\refint\Kalakobana.Application.dll
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net8.0\Kalakobana.Application.pdb
 D:\Mosquito\Kalakobana\Kalakobana.Application\obj\Debug\net8.0\ref\Kalakobana.Application.dll
+D:\Mosquito\Kalakobana\Kalakobana.Application\bin\Debug\net8.0\ka-GE\Kalakobana.Infrastructure.resources.dll

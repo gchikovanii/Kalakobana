@@ -154,3 +154,11 @@ D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net8.0\Kalakobana.API.genruntime
 D:\Mosquito\Kalakobana\Kalakobana.API\obj\Debug\net8.0\ref\Kalakobana.API.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\MediatR.Extensions.Microsoft.DependencyInjection.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Serilog.AspNetCore.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Serilog.Extensions.Hosting.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Serilog.Extensions.Logging.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Serilog.Formatting.Compact.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Serilog.Settings.Configuration.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Serilog.Sinks.Console.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\Serilog.Sinks.Debug.dll
+D:\Mosquito\Kalakobana\Kalakobana.API\bin\Debug\net8.0\ka-GE\Kalakobana.Infrastructure.resources.dll

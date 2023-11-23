@@ -1,14 +1,11 @@
-using Kalakobana.API.Infrastructure.Exceptions;
 using Kalakobana.API.Infrastructure.Extensions;
 using Kalakobana.Persistence.DataContext;
 using Kalakobana.Persistence.Store;
 using MediatR;
-using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Serilog;
-using System;
-using System.Reflection;
+
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +13,7 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddCustomSwagger();
 builder.Services.AddJwt(builder.Configuration);
+
 #region Serilog
 Log.Logger = new LoggerConfiguration()
                    .WriteTo.File("critical.txt", rollingInterval: RollingInterval.Day)
@@ -46,12 +44,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseMiddleware<ExceptionMiddleware>();
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
 app.UseAuthorization();
-
+app.UseGlobalExceptionHandler();
 app.MapControllers();
 
 

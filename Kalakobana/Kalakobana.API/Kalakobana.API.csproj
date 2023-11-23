@@ -9,8 +9,7 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
-    <PackageReference Include="Serilog" Version="3.1.1" />
-    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="8.0.0" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.0" />
@@ -25,6 +24,6 @@
     <EditorConfigFiles Remove="D:\Mosquito\Kalakobana\Kalakobana.API\Infrastructure\Exceptions\.editorconfig" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="D:\Mosquito\Kalakobana\Kalakobana.API\Infrastructure\Exceptions\.editorconfig" />
+    <None Include="D:\Mosquito\Kalakobana\Kalakobana.API\Infrastructure\Middlewares\.editorconfig" />
   </ItemGroup>
 </Project>

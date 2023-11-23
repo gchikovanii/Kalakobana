@@ -1,14 +1,8 @@
-﻿using Kalakobana.Application.Animals.Commands;
-using Kalakobana.Application.Infrastructure.Errors.Custom;
-using Kalakobana.Infrastructure.Repositories.Animals;
+﻿using Kalakobana.Infrastructure.Errors;
+using Kalakobana.Infrastructure.Localizations;
 using Kalakobana.Infrastructure.Repositories.Cities;
 using Kalakobana.Infrastructure.Units;
 using MediatR;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kalakobana.Application.Cities.Commands
 {
@@ -29,7 +23,7 @@ namespace Kalakobana.Application.Cities.Commands
                 await _cityRepository.DeleteAsync(cancellationToken, request.Name);
                 var result = await _unitOfWork.SaveChangesAsync(cancellationToken).ConfigureAwait(false);
                 if (result == false)
-                    throw new NotFoundException("Not Found");
+                    throw new NotFoundException(ErrorMessages.NotFound);
                 return result;
             }
             catch (Exception ex)

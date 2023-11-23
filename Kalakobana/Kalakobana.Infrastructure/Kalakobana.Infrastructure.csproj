@@ -8,4 +8,20 @@
     <ProjectReference Include="..\Kalakobana.Domain\Kalakobana.Domain.csproj" />
     <ProjectReference Include="..\Kalakobana.Persistence\Kalakobana.Persistence.csproj" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Localizations\ErrorMessages.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>ErrorMessages.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Update="Localizations\ErrorMessages.ka-GE.resx">
+      <Generator></Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Localizations\ErrorMessages.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>ErrorMessages.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
 </Project>

@@ -1,4 +1,5 @@
-﻿using Kalakobana.Application.Infrastructure.Errors.Custom;
+﻿using Kalakobana.Infrastructure.Errors;
+using Kalakobana.Infrastructure.Localizations;
 using Kalakobana.Infrastructure.Repositories.FirstNames;
 using Kalakobana.Infrastructure.Units;
 using MediatR;
@@ -23,7 +24,7 @@ namespace Kalakobana.Application.FirstNames.Commands
                 await _firstNameRepository.DeleteAsync(cancellationToken, request.Name);
                 var result = await _unitOfWork.SaveChangesAsync(cancellationToken);
                 if (result == false)
-                    throw new NotFoundException("Not Found");
+                    throw new NotFoundException(ErrorMessages.NotFound);
                 return result;
             }
             catch (Exception ex)
