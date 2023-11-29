@@ -24,6 +24,10 @@ namespace Kalakobana.API.Controllers
         {
             return Ok(await _mediator.Send(input));
         }
-
+        [HttpPost("Logout")]
+        public async Task<IActionResult> Logout(LogoutUserCommand input)
+        {
+            return Ok(await _mediator.Send(input));
+        }
     }
 }

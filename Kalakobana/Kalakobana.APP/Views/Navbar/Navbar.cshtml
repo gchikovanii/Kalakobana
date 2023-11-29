@@ -1,0 +1,40 @@
+﻿<header>
+    <nav class="navbar navbar-expand-lg bg-white sticky-top navbar-light p-3 shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="#"><i class="fa-solid fa-shop me-2"></i> <strong>ქალაქობანა</strong></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-user-tie"></i> ადმინ პანელი
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <a asp-controller="AdminPanel" asp-action="AdminPanelCreateProduct" class="nav-link mx-2 text-uppercase active" aria-current="page"></a>
+                        </div>
+                    </li>
+
+                    <li class="nav-item">
+                        <a asp-controller="Home" asp-action="Index" class="nav-link mx-2 text-uppercase active" aria-current="page">მთავარი</a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-controller="Products" asp-action="Products" class="nav-link mx-2 text-uppercase">რეიტინგი</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto ">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="accountDropdown" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <i class="fa-solid fa-circle-user me-1"></i> ანგარიში
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="accountDropdown">
+                            <a class="dropdown-item" asp-controller="Account" asp-action="Login"><i class="fa-solid fa-right-to-bracket me-1"></i> შესვლა</a>
+                            <a class="dropdown-item" asp-controller="Account" asp-action="Register"><i class="fa-solid  fa-user-plus me-1"></i> რეგისტრაცია</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
